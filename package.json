@@ -1,0 +1,8 @@
+{
+  "name": "rails7_client_side_search",
+  "version": "1.0.0",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "controllers": "^0.0.2"
+  }
+}

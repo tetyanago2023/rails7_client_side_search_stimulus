@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+<%= link_to "New post", new_post_path %>
+
+<div id="posts">
+  <table data-controller="search">
+    <thead>
+      <tr>
+        <th>
+          <input type="text" placeholder="Search..." data-action="input->search#filterPosts"/>
+        </th>
+        <th>Title</th>
+        <th>Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td></td>
+          <td data-search-target="title"><%= post.title %></td>
+          <td data-search-target="content"><%= post.content %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
